@@ -58,15 +58,16 @@ android {
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.release
+            signingConfig null
         }
         release {
+            storeFile 
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             debuggable false
             jniDebuggable false
-            signingConfig signingConfigs.release
+            signingConfig null
             zipAlignEnabled true
             multiDexEnabled true
         }
