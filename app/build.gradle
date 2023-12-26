@@ -50,24 +50,15 @@ android {
     }
     signingConfigs {
         release {
-            enableV1Signing true
-            enableV2Signing true
-            enableV3Signing true
-            enableV4Signing true
-        }
-    }
-    unsigningConfigs{
-        release {
             enableV1Signing false
             enableV2Signing false
             enableV3Signing false
             enableV4Signing false
         }
-        
     }
     buildTypes {
         debug {
-            signingConfig unsigningConfigs.release
+            signingConfig signingConfigs.release
         }
         release {
             minifyEnabled true
@@ -75,7 +66,7 @@ android {
             //proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             debuggable false
             jniDebuggable false
-            signingConfig unsigningConfigs.release
+            signingConfig signingConfigs.release
             zipAlignEnabled true
             multiDexEnabled true
         }
