@@ -10,8 +10,8 @@ plugins {
 //    id 'com.didiglobal.booster'
 }
 
-def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))
+//def keystoreProperties = new Properties()
+//keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))
 def applicationProperties = new Properties()
 applicationProperties.load(new FileInputStream(rootProject.file("application.properties")))
 def sha = System.getenv("GITHUB_SHA")
